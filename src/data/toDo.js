@@ -1,4 +1,4 @@
-const toDo = [
+const toDoes = [
   {
     id: 1,
     name: "poner lavadora",
@@ -16,4 +16,4 @@ const toDo = [
   },
 ];
 
-export default toDo;
+export default toDoes;
