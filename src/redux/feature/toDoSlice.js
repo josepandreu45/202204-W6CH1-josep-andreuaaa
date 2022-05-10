@@ -8,12 +8,14 @@ const toDoSlice = createSlice({
     removeToDo: (toDoes, action) => {
       return toDoes.filter((toDo) => toDo.id !== action.payload);
     },
+    addItem: (toDoes, action) => [...toDoes, action.payload],
   },
 });
 
 export const {
   removeToDo: removeToDoActionCreator,
   loadToDoes: loadToDoesActionCreator,
+  addItem: addItemActionCreator,
 } = toDoSlice.actions;
 
 export default toDoSlice.reducer;

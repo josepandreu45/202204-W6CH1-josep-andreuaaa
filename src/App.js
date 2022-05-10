@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import Form from "./components/Form/Form";
 import ToDoesList from "./components/ToDoList/ToDoList";
 import toDoesData from "./data/toDo";
 import { loadToDoesActionCreator } from "./redux/feature/toDoSlice";
@@ -11,7 +12,12 @@ function App() {
     dispatch(loadToDoesActionCreator(toDoesData));
   }, [dispatch]);
 
-  return <ToDoesList />;
+  return (
+    <>
+      <ToDoesList />
+      <Form />
+    </>
+  );
 }
 
 export default App;
